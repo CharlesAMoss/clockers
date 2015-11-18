@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<title>Wake UP!</title>
+		
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		
+		<link rel="stylesheet" href="css/main.css">
+		<style> 
+		</style>
+		<script src="js/clock.js" ></script>
+	</head>
+	<body onload="setInterval('updateClock()', 200);">
+		
+		<article class="main__article">
+
+        <h2 class="main__title"></h2>
+
+        <p id="clock"></p>
+
+        <form id="setTime" class="main__form">
+          <div class="form__group">
+            <label class="form__label" for="setTime"></label>
+            <input class="form__input" id="time" type="datetime-local">
+          </div>
+
+          <button class="form__btn" type="submit">set</button>
+        </form>
+
+        <div id="current">
+          <p></p>
+        </div>
+
+		<audio id="alarm" src="Oddbounce.ogg" controls></audio>
+
+      </article>
+		
+		
+		<script src="js/alarm.js" ></script>
+	</body>
+</html>
