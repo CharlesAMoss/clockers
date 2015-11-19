@@ -33,20 +33,18 @@ document.body.addEventListener('keypress', e => {
 
 // from brian j brennan https://twitter.com/brianloveswords/status/665169370906165248 
 
+$(document).ready(function() {
 
-// $(document).ready(function() {
+	$("form#setTime").submit(function(event) {
+ 		var alarmGet = $("input#time").val();
+		var alarmSet = 'new Date(' + alarmGet + ')';
+	 
+	 	return alarmSet;
+	 });
 
-//     $("form#setTime").submit(function(event) {
+	 var alarmTimesSet = function (alarmSet) {
+		 alarmTimes.push(alarmSet);
+	 };
 
-//         var alarmSet = $("input#time").val();
-
-        
-
-//         $("#result p").text(result);
-
-//         $("#result").show();
-//         event.preventDefault();
-//     });
-
-// });
+});
 
