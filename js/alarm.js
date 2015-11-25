@@ -1,6 +1,7 @@
 const alarmElement = document.getElementById('alarm');
 const alarmTimes = [
 	//new Date('2015-11-16 11:25 -0800')
+	new Date('2015-11-24T23:00')
 ];
 
 function playAlarm() {
@@ -23,6 +24,10 @@ function stopAlarm() {
 	alarmElement.pause();
 } 
 
+var alarmTimesSet = function (alarmSet) {
+		 alarmTimes.push(alarmSet);
+}
+
 alarmTimes.forEach(time => checkTime(time));
 document.body.addEventListener('keypress', e => {
 	// Spacebar
@@ -32,19 +37,3 @@ document.body.addEventListener('keypress', e => {
 });
 
 // from brian j brennan https://twitter.com/brianloveswords/status/665169370906165248 
-
-$(document).ready(function() {
-
-	$("form#setTime").submit(function(event) {
- 		var alarmGet = $("input#time").val();
-		var alarmSet = 'new Date(' + alarmGet + ')';
-	 
-	 	return alarmSet;
-	 });
-
-	 var alarmTimesSet = function (alarmSet) {
-		 alarmTimes.push(alarmSet);
-	 };
-
-});
-

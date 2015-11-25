@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="css/main.css">
 		<script src="js/jquery.min.js" ></script>
 		<script src="js/clock.js" ></script>
+		
 	</head>
 	<body onload="setInterval('updateClock()', 200);">
 		
@@ -24,7 +25,7 @@
         <form id="setTime" class="main__form">
           <div class="form__group">
             <label class="form__label" for="setTime"></label>
-            <input class="form__input" id="time" type="datetime-local">
+            <input class="form__input" name="time" type="datetime-local">
           </div>
 
           <button class="form__btn" type="submit">set</button>
@@ -36,9 +37,9 @@
 
 		<audio id="alarm" src="Oddbounce.ogg" controls></audio>
 
-      </article>
-		
+        </article>
 		
 		<script src="js/alarm.js" ></script>
+		<script src="js/interface.js" ></script>
 	</body>
 </html>
